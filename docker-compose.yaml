@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  summarizer-api:
+    build: ./src
+    volumes:
+      - ./src/:/usr/src/app
+    ports:
+      - 5000:5000
+    environment:
+      FLASK_ENV: development
+      FLASK_DEBUG: 1
+      FLASK_APP: app.py
